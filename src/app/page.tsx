@@ -274,22 +274,20 @@ export default function Home() {
               }
 
               .rock-1-position {
-                right: -74.581px;
-                bottom: -64.582px;
-                left: auto;
-                top: auto;
+                right: -50px;
+                bottom: 0px;
               }
 
               @media (min-width: 768px) {
                 .rock-1-position {
-                  right: -67.373px;
-                  bottom: -67.373px;
+                  right: -30.373px;
+                  bottom: -30.373px;
                 }
               }
 
               @media (min-width: 1024px) {
                 .rock-1-position {
-                  right: -133.164px;
+                  right: 50.164px;
                   bottom: -48.164px;
                 }
               }
@@ -297,8 +295,6 @@ export default function Home() {
               .rock-2-position {
                 left: 29px;
                 top: 100px;
-                right: auto;
-                bottom: auto;
               }
 
               @media (min-width: 768px) {
@@ -318,8 +314,6 @@ export default function Home() {
               .rock-3-position {
                 left: 1px;
                 bottom: 182.706px;
-                right: auto;
-                top: auto;
               }
 
               @media (min-width: 768px) {
