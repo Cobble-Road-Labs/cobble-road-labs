@@ -1,21 +1,21 @@
 import type { Metadata } from "next";
-import { Manrope } from "next/font/google";
-import localFont from "next/font/local"
+import { Manrope, Figtree } from "next/font/google";
+//import localFont from "next/font/local"
 import "./globals.css";
-
-const satoshi = localFont({
-  src: "../../public/fonts/Satoshi-Variable.woff2",
-  variable: "--font-satoshi",
-  weight: "100 900",
-  display: "swap",
-  style: "normal",
-})
 
 const manrope = Manrope({
   variable: "--font-manrope",
   subsets: ["latin"],
   display: "swap",
   weight: ["200", "300", "400", "500", "600", "700", "800",],
+  style: "normal",
+})
+
+const figtree = Figtree({
+  variable: "--font-figtree",
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
   style: "normal",
 })
 
@@ -32,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${satoshi.variable} ${manrope.variable} antialiased`}
+        className={`${figtree.variable} ${manrope.variable} antialiased`}
       >
         {children}
       </body>

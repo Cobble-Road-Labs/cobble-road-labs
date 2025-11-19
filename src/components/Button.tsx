@@ -11,6 +11,7 @@ interface ButtonProps {
     type?: 'submit' | 'button' | 'reset';
     disabled?: boolean;
     onClick?: React.MouseEventHandler<HTMLButtonElement | HTMLAnchorElement>;
+    forceHover?: boolean;
 }
 
 const getVariantClasses = (variant: ButtonVariant = 'primary') => {
@@ -19,23 +20,27 @@ const getVariantClasses = (variant: ButtonVariant = 'primary') => {
             return {
                 base: 'bg-background border-2 border-primary text-primary',
                 hover: 'hover:bg-secondary hover:border-secondary',
+                active: 'bg-secondary border-secondary',
             };
         case 'primary' :
         default:
             return {
                 base: 'bg-accent text-background ',
                 hover: 'hover:bg-primary',
+                active: 'bg-primary',
             };
     }
 }
 
-export default function Button({ href, children, className='', variant='primary', type, disabled, onClick}: ButtonProps ) {
+export default function Button({ href, children, className='', variant='primary', type, disabled, onClick, forceHover = false}: ButtonProps ) {
     const variantClasses = getVariantClasses(variant);
+
+    const hoverOrActiveClasses = forceHover ? variantClasses.active : variantClasses.hover;
 
     const classes = `text-base md:text-lg lg:text-xl
                     px-6 py-3 md:px-8 md:py-4
                     rounded-lg
-                    font-body font-[600]
+                    font-semibold
                     transition-all
                     cursor-pointer
                     shadow-lg shadow-black/10
@@ -44,7 +49,7 @@ export default function Button({ href, children, className='', variant='primary'
                     ${disabled ? 'opacity-50 cursor-not-allowed' : ''}
 
                     ${variantClasses.base}
-                    ${variantClasses.hover}
+                    ${hoverOrActiveClasses}
 
                     ${className}
                     `;
