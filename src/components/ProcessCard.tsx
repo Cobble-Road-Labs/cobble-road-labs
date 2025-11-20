@@ -1,5 +1,6 @@
+'use client';
+
 import React from "react";
-import { set } from "sanity";
 
 interface ProcessCardProps {
     heading: string;

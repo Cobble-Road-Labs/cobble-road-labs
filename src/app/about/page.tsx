@@ -30,7 +30,11 @@ export default function About() {
                         <div className='flex flex-col gap-8 md:gap-8 lg:gap-12 items-center'>
                             <div className='flex flex-col w-full gap-4 md:gap-5 lg:gap-6'>
                                 <h2 className='capitalize font-heading font-extrabold text-3xl md:text-4xl lg:text-5xl text-center'>Our Foundation is Enduring Craftsmanship</h2>
-                                <p className='text-base md:text-lg lg:text-xl font-normal font-body text-center'>When the Roman Empire built its cobblestone roads, they weren't thinking of a temporary path; they engineered a network built to last centuries, enduring wars and progress.<br/><br/><strong>That is the philosophy behind Cobble Road Labs.</strong><br/><br/>We exist to be your enduring craftsmanship web partner, eliminating the risk of a wasted investment and ensuring your digital asset stands the test of time. Your enterprise deserves a strategic foundation, not a temporary patch. We are a trusted web design agency committed to building your online presence as a purpose-built, efficient asset, ensuring predictable traffic and long-term sales growth.</p>
+                                <p className='text-base md:text-lg lg:text-xl font-normal font-body text-center'>
+                                  When the Roman Empire built its cobblestone roads, they weren't thinking of a temporary path; they engineered a network built to last centuries, enduring wars and progress.<br/><br/>
+                                  <span className='font-semibold'>That is the philosophy behind Cobble Road Labs.</span><br/><br/>
+                                  We exist to be your enduring craftsmanship web partner, eliminating the risk of a wasted investment and ensuring your digital asset stands the test of time. Your enterprise deserves a strategic foundation, not a temporary patch. We are a trusted web design agency committed to building your online presence as a purpose-built, efficient asset, ensuring predictable traffic and long-term sales growth.
+                                </p>
                             </div>
                             <div className='aspect-video w-full rounded-2xl bg-secondary/50 max-w-[720px]'>
                                 Video

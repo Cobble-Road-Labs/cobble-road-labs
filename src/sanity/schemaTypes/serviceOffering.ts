@@ -15,8 +15,15 @@ export const serviceOffering = defineType({
     fields: [
       // CORE IDENTIFIERS
       defineField({
-        name: 'title',
+        name: 'service',
         title: 'Service Title (e.g., "Web Development")',
+        type: 'string',
+        validation: Rule => Rule.required(),
+        group: 'main',
+      }),
+      defineField({
+        name: 'title',
+        title: 'Creative Title',
         type: 'string',
         validation: Rule => Rule.required(),
         group: 'main',
@@ -157,6 +164,12 @@ export const serviceOffering = defineType({
           title: 'Longevity Section Paragraph',
           type: 'array',
           of: [{type: 'block'}],
+          group: 'longevity',
+      }),
+      defineField({
+          name: 'longevityImage',
+          title: 'Longevity Image',
+          type: 'image',
           group: 'longevity',
       }),
 
