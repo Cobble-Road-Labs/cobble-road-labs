@@ -243,7 +243,6 @@ export default function Home() {
 
                     {/*Case Studies Section*/}
                     <section>
-                      <LatestCaseStudy/>
                     </section>
                     
                     {/*Partnership Section*/}
