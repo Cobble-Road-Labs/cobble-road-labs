@@ -58,6 +58,12 @@ export const caseStudy = defineType({
         group: 'client',
       }),
       defineField({
+        name: 'clientDescription',
+        title: 'Description of Client',
+        type: 'text',
+        group: 'client',
+      }),
+      defineField({
         name: 'thumbnail',
         title: 'Thumbnail Image (Card)',
         type: 'image',
@@ -155,6 +161,12 @@ export const caseStudy = defineType({
         name: 'reviewerTitle',
         title: 'Reviewer Title/Role',
         type: 'string',
+        group: 'review',
+      }),
+      defineField({
+        name: 'testimonialImage',
+        title: 'Testimonial Image',
+        type: 'image',
         group: 'review',
       }),
 

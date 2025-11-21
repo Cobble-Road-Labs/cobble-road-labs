@@ -11,7 +11,6 @@ import CTASection from '@/components/CTASection';
 import Navbar from '@/components/Navbar';
 
 export default function Home() {
-
     useEffect(() => {
         const rockWrappers = document.querySelectorAll('.floating-rock-wrapper');
         const shadowElements = [
@@ -84,7 +83,7 @@ export default function Home() {
         <div className="bg-background min-h-screen">
             <div className="flex flex-col items-center p-4">
                 <Navbar />
-                <main className="flex flex-col items-center justify-start grow w-full gap-16 md:gap-24 lg:gap-32 max-w-full md:max-w-[708px] lg:max-w-7xl">
+                <main className="flex flex-col items-center justify-start grow w-full gap-32 md:gap-48 lg:gap-64 max-w-full md:max-w-[708px] lg:max-w-7xl">
                     {/*Hero Section*/}
                     <section className="h-screen flex flex-col items-center justify-center relative w-full max-w-full">
                       {/*Rock container*/}
@@ -241,10 +240,12 @@ export default function Home() {
                         
                       </div>
                     </section>
+
                     {/*Case Studies Section*/}
                     <section>
-
+                      <LatestCaseStudy/>
                     </section>
+                    
                     {/*Partnership Section*/}
                     <section className='flex flex-col md:flex-row items-center justify-center w-full max-w-full gap-4 md:gap-6 lg:gap-8'>
                       <div className='flex-1 aspect-4/3 w-full h-full relative '>

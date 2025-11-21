@@ -1,11 +1,15 @@
-'use client';
-
-import Navbar from "@/components/Navbar";
+import { defineQuery } from 'next-sanity'
+import { sanityFetch } from '@/sanity/lib/live';import Navbar from "@/components/Navbar";
 import Button from "@/components/Button";
 import CTASection from "@/components/CTASection";
 import Image from "next/image";
+import CaseStudyCard from '@/components/CaseStudyCard';
 
-export default function Services() {
+const CASE_STUDY_QUERY = defineQuery(`*[_type == "caseStudy"] | order(_createdAt desc) { _id, title, slug, thumbnail, cardDescription, linkedService->{service} }`)
+
+export default async function CaseStudies() {
+    const {data: caseStudies} = await sanityFetch({query: CASE_STUDY_QUERY});
+
     return (
         <div className="bg-background min-h-screen">
             <div className="flex flex-col items-center p-4">
@@ -23,7 +27,13 @@ export default function Services() {
                         </div>
                     </section>
                     {/*Case Studies Section*/}
-                    <section></section>
+                    {caseStudies.length > 0 && (
+                        <section className='w-full grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8'>
+                            {caseStudies.map((caseStudy : any) => (
+                                <CaseStudyCard key={caseStudy._id} caseStudy={caseStudy} />
+                            ))}
+                        </section>
+                    )}
                     {/*Process Advantage Section*/}
                     <section className='w-full max-w-full'>
                         <div className='flex flex-col lg:flex-row items-center justify-center w-full max-w-full gap-4 md:gap-6 lg:gap-8'>

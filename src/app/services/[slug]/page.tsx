@@ -8,7 +8,7 @@ import Navbar from "@/components/Navbar";
 import CTASection from "@/components/CTASection";
 import Button from "@/components/Button";
 import ArrowLink from "@/components/ArrowLink";
-import { BadgeAlert, Footprints } from "lucide-react";
+import { BadgeAlert } from "lucide-react";
 import Link from "next/link";
 
 const SERVICE_QUERY = defineQuery(`*[_type == "serviceOffering" && slug.current == $slug][0] {

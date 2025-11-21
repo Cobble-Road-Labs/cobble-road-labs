@@ -193,4 +193,11 @@ export const serviceOffering = defineType({
           group: 'seo',
       }),
     ],
+    preview: {
+      select: {
+        title: 'service', // Use the 'service' (formal title) field as the main displayed title
+        subtitle: 'title', // Optionally, use the 'title' (creative title) as a subtitle
+        media: 'thumbnail',
+      },
+    },
 });

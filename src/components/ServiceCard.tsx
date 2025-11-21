@@ -29,12 +29,12 @@ export default function ServiceCard({ service }: ServiceCardProps) {
             <div className="relative w-full aspect-4/3">
                 <Image src={urlFor(thumbnail).url()} alt={serviceName} fill className="object-cover "/>
             </div>
-            <div className="flex flex-col p-4 md:p-6 gap-4 md:gap-5 lg:gap-6">
+            <div className="flex flex-col p-4 md:p-6 gap-4 md:gap-5 lg:gap-6 h-full" >
                 <h3 className='font-heading text-center font-bold text-2xl md:text-3xl lg:text-4xl'>{serviceName}</h3>
                 {cardDescription && (
                     <p className="font-sans text-base md:text-lg lg:text-xl text-center">{cardDescription}</p>
                 )}
-                <div className={`flex items-left font-sans font-semibold text-base md:text-lg lg:text-xl  transition-all gap-4 justify-center
+                <div className={`flex items-left font-sans font-semibold text-base md:text-lg lg:text-xl  transition-all gap-4 justify-center mt-auto
                          ${isHovered ? 'gap-6' : 'gap-4'}
                       `}>
                     View service

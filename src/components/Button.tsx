@@ -18,15 +18,15 @@ const getVariantClasses = (variant: ButtonVariant = 'primary') => {
     switch (variant) {
         case 'secondary':
             return {
-                base: 'bg-background border-2 border-primary text-primary',
+                base: 'bg-transparent border-2 border-primary text-primary',
                 hover: 'hover:bg-secondary hover:border-secondary',
                 active: 'bg-secondary border-secondary',
             };
         case 'primary' :
         default:
             return {
-                base: 'bg-accent text-background ',
-                hover: 'hover:bg-primary',
+                base: 'bg-accent border-2 border-accent text-background ',
+                hover: 'hover:bg-primary hover:border-primary',
                 active: 'bg-primary',
             };
     }
@@ -40,10 +40,10 @@ export default function Button({ href, children, className='', variant='primary'
     const classes = `text-base md:text-lg lg:text-xl
                     px-6 py-3 md:px-8 md:py-4
                     rounded-lg
-                    font-semibold
+                    font-semibold font-sans
                     transition-all
                     cursor-pointer
-                    shadow-lg shadow-black/10
+                    shadow-lg shadow-black/20
                     flex justify-center items-center text-center w-fit
 
                     ${disabled ? 'opacity-50 cursor-not-allowed' : ''}
